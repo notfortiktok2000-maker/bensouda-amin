@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-red: #CC0000;
+  --color-brand-red-bright: #FF1111;
+  --color-brand-black: #0D0D0D;
+  --color-brand-dark: #161616;
+  --color-brand-card: #1C1C1C;
+  --color-brand-border: #2A2A2A;
+  --color-brand-text: #FFFFFF;
+  --color-brand-muted: #999999;
+
+  --font-sans: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Oswald", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--color-brand-black);
+  color: var(--color-brand-text);
+  font-family: var(--font-sans);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.02) 0px,
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+}
+
+.slash-heading {
+  position: relative;
+  display: inline-block;
+  padding-left: 1.5rem;
+}
+
+.slash-heading::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10%;
+  height: 80%;
+  width: 6px;
+  background-color: var(--color-brand-red);
+  transform: skewX(-15deg);
+}
+
+.diagonal-slash {
+  background: linear-gradient(115deg, #0D0D0D 40%, #CC0000 40%, #CC0000 40.5%, transparent 40.5%);
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+.card-hover:hover {
+  border-color: var(--color-brand-red);
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(204, 0, 0, 0.2);
+}
+
+.nav-link:hover {
+  color: var(--color-brand-red);
+}
+
+.red-glow {
+  text-shadow: 0 0 10px rgba(204, 0, 0, 0.6);
+}
+
+html {
+  scroll-behavior: smooth;
+}
