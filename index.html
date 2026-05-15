@@ -10,6 +10,18 @@
     <meta property="og:description" content="Stock motos scooters quads à Tanger. Réservez en ligne.">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://motoomarboutique.ma">
+    <script>
+      // Prevent Polyfills from crashing when overriding fetch in iframe
+      try {
+        const _f = window.fetch;
+        Object.defineProperty(window, 'fetch', {
+          configurable: true,
+          enumerable: true,
+          get: () => _f,
+          set: () => { console.warn('Caught fetch override attempt'); }
+        });
+      } catch (e) {}
+    </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
